@@ -6,7 +6,7 @@ Kelompok Body Fit
 	Link GitHub	: https://github.com/tyaranipuspa/implementasi-perangkat-lunak/tree/master
 
 3. Yitshak Wanli S	(1301174635)
-	Link GitHub	: 
+	Link GitHub	: https://github.com/yitshak22/SKPL-dan-DPPL
 
 4. Siti Nasron Azizah M	(1301174641)
 	Link GitHub	: https://github.com/SNAzizah/IMPAL
