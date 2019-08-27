@@ -11,4 +11,5 @@ Kelompok Body Fit
 4. Siti Nasron Azizah M	(1301174641)
 	Link GitHub	: https://github.com/SNAzizah/IMPAL
 
-5. 
+5. Nisrina Rafifa Hanif	(1301174072)
+	Link GitHub	: https://github.com/nisrinaRH/IFIK-41-04_BodyFit
