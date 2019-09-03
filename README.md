@@ -1,3 +1,7 @@
+Link Organization/Colaboration:
+	https://github.com/IMPALBodyFit/Impal
+
+
 Kelompok Body Fit
 1. I NYM Yoga Saputra	(1301174658)
 	Link GitHub	: https://github.com/nyomanyoga/Impal
