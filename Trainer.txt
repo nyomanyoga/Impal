@@ -1,0 +1,42 @@
+alter session set nls_date_format = 'dd/mon/yyyy';
+
+create table AdminWeb(
+    nama_AdminWeb VARCHAR2(50),
+    id_AdminWeb CHAR(10) NOT NULL ENABLE,
+    Ttl VARCHAR2 (35),
+    No_Telepon VARCHAR2 (15),
+    Alamat VARCHAR2(100),
+    Jenis_Kelamin VARCHAR2(1),
+    CONSTRAINT AdminWeb_pk PRIMARY KEY (id_AdminWeb)
+);
+
+drop table Trainer;
+
+create table Trainer
+(id_trainer VARCHAR2(10),
+nama VARCHAR2(250),
+Ttl VARCHAR2(50),
+Alamat VARCHAR2(250),
+No_Telepon VARCHAR2(15),
+Jenis_kelamin VARCHAR2(10),
+id_AdminWeb CHAR(10) NOT NULL ENABLE,
+CONSTRAINT Trainer_pk primary key(id_trainer)ENABLE, 
+CONSTRAINT Trainer_FK FOREIGN KEY (id_AdminWeb)REFERENCES  AdminWeb (id_AdminWeb) ON DELETE CASCADE ENABLE 
+);
+
+INSERT INTO AdminWeb VALUES ('Arif Gaga','2231938772','Bandung,13 September 1999','081283465748','Bandung','L');
+INSERT INTO AdminWeb VALUES ('Cyntia Gabriella','2246768798','Ciamis, 26 Oktober 1998','087753465789','Ciamis','P');
+INSERT INTO AdminWeb VALUES ('Wira Geraldy','2278493643','Rajadesa,03 Maret 2000','081262789829','Tangerang','L');
+INSERT INTO AdminWeb VALUES ('Kirana Larasati','2145673887','Kawali, 30 Juni 1992','085673648263','Bekasi','P');
+INSERT INTO AdminWeb VALUES ('Aldy Brughman','2136734382','Jakarta, 12 Desember 1989','082216744520','Slipi','L');
+
+
+insert into Trainer values ('T001', 'Ucok Lubis', 'Medan,20 Agustus 1990', 'JL.Riau no.2, Bandung, Jawa Barat', '081233556687','Laki-Laki', '2231938772');
+insert into Trainer values ('T002','Bagus Gerald', 'Jakarta,12 Maret 1995', 'JL.Margahayu no.1, Bandung, Jawa Barat','085234273467','Laki-Laki', '2231938772');
+insert into Trainer values ('T003','Matahari Barat', 'Padang,08 Agustus 1992','JL.Rawa Sari Barat, Jakarta','087735625253','Laki-Laki', '2246768798');
+insert into Trainer values ('T004','Senja Ellen', 'Bandung,13 Mei 1996','JL.Kebon Pisang, Bandung, Jawa Barat','085233447261','Prempuan', '2278493643');
+insert into Trainer values ('T005','Mawar Desa', 'Jakarta,15 April 1995','JL.Kopo, Bandung, Jawa Barat','085264534231','Prempuan', '2145673887');
+insert into Trainer values ('T006','Mulya Abadi', 'Solo,04 Oktober 1992','JL.Pasir Koja, Bandung, Jawa Barat','081267854637','Laki-Laki','2136734382');
+
+select * from trainer;
+select id_trainer,nama,id_AdminWeb from trainer join  AdminWeb using(id_AdminWeb) WHERE id_AdminWeb ='2246768798';
